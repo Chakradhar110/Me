@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Chakradhar Side on</title>
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      padding: 20px;
+    }
+    .image-gallery img {
+      width: 150px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.1);
+    }
+    #logic-output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Circle Logo with Animation */
+    .logo {
+      width: 5px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      border: 6px solid transparent;
+      background-image: linear-gradient(white, white), 
+                        linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      animation: border-spin 4s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo span {
+      
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      animation: fade-in 2s ease-in-out infinite alternate;
+    }
+
+    /* Keyframes for Animations */
+    @keyframes border-spin {
+      0% {
+        transform: rotate(0deg
+      
+      100% {
+        transform: rotate(360de
+      }
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <span>Chakradhar</span>
+  </div>
+  <header>
+    <h1>Chakradhar Kale</h1>
+  </header>
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! My name is Chakradhar Kale. I’m passionate about web development and love creating interactive websites.</p>
+    <p>This is My personal Website.</p>
+  </section>
+  <section>
+    <h2>Image Gallery</h2>
+    <div class="image-gallery">
+      <img src="/myweb/img1.jpg" alt="Image 1" onclick="showImageInfo('Image 1')">
+      <img src="/myweb/img2.jpg" alt="Image 2" onclick="showImageInfo('Image 2')">
+      <img src="/myweb/img3.jpg" alt="Image 3" onclick="showImageInfo('Image 3')">
+    </div>
+    <div id="logic-output">Click on an image to see its details!</div>
+  </section>
+  <section>
+    <h2>Interactive Feature</h2>
+    <p>Click the button below to generate a random number:</p>
+    <button onclick="generateRandomNumber()">Generate Number</button>
+    <p id="random-number-output"></p>
+  </section>
+  <footer>
+    <p>&copy; 2024 Chakradhar Kale. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showImageInfo(imageName) {
+      const outputDiv = document.getElementById('logic-output');
+      outputDiv.textContent = `You clicked on ${imageName}!`;
+    }
+
+    function generateRandomNumber() {
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      const outputDiv = document.getElementById('random-number-output');
+      outputDiv.textContent = `Random Number: ${randomNumber}`;
+    }
+  </script>
+</body>
+</html>
